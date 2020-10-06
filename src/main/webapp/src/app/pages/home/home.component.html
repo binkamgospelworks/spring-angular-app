@@ -1,0 +1,23 @@
+<main role="main" >
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2">Dashboard</h1>
+      <div class="btn-toolbar mb-2 mb-md-0">
+        
+       
+      </div>
+    </div>
+    
+
+    <div class="card text-center">
+        <div class="card-header">
+          <h2>Integration health Check</h2>
+        </div>
+        <div class="card-body">
+          <p>Click the button below, if you see the message "Test Successful", your application is integrated properly.</p>
+          <button type="button" class="btn btn-primary btn-lg " (click)="sayHello()">Test the Integration</button>
+    
+            <div *ngIf="result==='loading...'" style="color: orange;">{{result}}</div>
+            <div *ngIf="result!='loading...'" style="color: green;">{{result}}</div>
+        </div>
+      </div>
+  </main>

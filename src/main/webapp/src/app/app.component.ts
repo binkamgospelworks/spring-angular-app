@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +6,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
-  result = '';
 
-  constructor(private http: HttpClient){
+  constructor(){
   }
 
-  public sayHello(): void {
-    this.result = 'loading...';
-    this.http.get(`/api/test`).subscribe(response => this.result = response['value']);
-  }
 
 }

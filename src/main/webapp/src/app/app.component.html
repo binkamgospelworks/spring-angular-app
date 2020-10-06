@@ -1,5 +1,12 @@
-<h1>
-  {{title}}
-</h1>
-<button (click)="sayHello()">Say Hello</button>
-<span>{{result}}</span>
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <app-side-nav></app-side-nav>
+    </div>
+    <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <router-outlet></router-outlet>
+    </div>
+    
+  </div>
+</div>
